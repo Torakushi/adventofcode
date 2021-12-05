@@ -1,4 +1,4 @@
-package main
+package day2
 
 import (
 	"bufio"
@@ -9,7 +9,9 @@ import (
 	"strings"
 )
 
-func main() {
+func Day2() {
+	fmt.Println("DAY2:")
+
 	if err := firstPart(); err != nil {
 		log.Fatal(err)
 	}
@@ -17,10 +19,12 @@ func main() {
 	if err := secondPart(); err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println()
 }
 
 func firstPart() error {
-	file, err := os.Open("../data.txt")
+	file, err := os.Open("day2/data.txt")
 	if err != nil {
 		return fmt.Errorf("error while opening file: %s", err)
 	}
@@ -56,7 +60,7 @@ func firstPart() error {
 }
 
 func secondPart() error {
-	file, err := os.Open("../data.txt")
+	file, err := os.Open("day2/data.txt")
 	if err != nil {
 		return fmt.Errorf("error while opening file: %s", err)
 	}

@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"bufio"
@@ -9,7 +9,9 @@ import (
 )
 
 // SOLUTION: 1665
-func main() {
+func Day1() {
+	fmt.Println("DAY1:")
+
 	if err := firstPart(); err != nil {
 		log.Fatal(err)
 	}
@@ -17,11 +19,13 @@ func main() {
 	if err := secondPart(); err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println()
 }
 
 // the number of times a measurement increases
 func firstPart() error {
-	file, err := os.Open("../data.txt")
+	file, err := os.Open("day1/data.txt")
 	if err != nil {
 		return fmt.Errorf("error while opening file: %s", err)
 	}
@@ -64,7 +68,7 @@ type window struct {
 
 // the number of times the sum of measurements in a 3 - sliding window increases
 func secondPart() error {
-	file, err := os.Open("../data.txt")
+	file, err := os.Open("day1/data.txt")
 	if err != nil {
 		return fmt.Errorf("error while opening file: %s", err)
 	}

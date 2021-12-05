@@ -1,4 +1,4 @@
-package main
+package day3
 
 import (
 	"bufio"
@@ -12,15 +12,23 @@ import (
 	"github.com/go-gota/gota/series"
 )
 
-func main() {
+func Day3() {
+	fmt.Println("DAY3:")
+
+	if err := firstPart(); err != nil {
+		log.Fatal(err)
+	}
+
 	if err := secondPart(); err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println()
 }
 
 // 3923414
 func firstPart() error {
-	file, err := os.Open("../data.txt")
+	file, err := os.Open("day3/data.txt")
 	if err != nil {
 		return fmt.Errorf("error while opening file: %s", err)
 	}
@@ -55,7 +63,7 @@ func firstPart() error {
 
 //5852595
 func secondPart() error {
-	file, err := os.Open("../data.txt")
+	file, err := os.Open("day3/data.txt")
 	if err != nil {
 		return fmt.Errorf("error while opening file: %s", err)
 	}
