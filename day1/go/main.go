@@ -21,7 +21,7 @@ func main() {
 
 // the number of times a measurement increases
 func firstPart() error {
-	file, err := os.Open("data.txt")
+	file, err := os.Open("../data.txt")
 	if err != nil {
 		return fmt.Errorf("error while opening file: %s", err)
 	}
@@ -64,7 +64,7 @@ type window struct {
 
 // the number of times the sum of measurements in a 3 - sliding window increases
 func secondPart() error {
-	file, err := os.Open("data.txt")
+	file, err := os.Open("../data.txt")
 	if err != nil {
 		return fmt.Errorf("error while opening file: %s", err)
 	}
