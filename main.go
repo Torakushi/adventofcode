@@ -2,6 +2,7 @@ package main
 
 import (
 	"adventofcode/day1"
+	"adventofcode/day10"
 	"adventofcode/day2"
 	"adventofcode/day3"
 	"adventofcode/day4"
@@ -22,4 +23,5 @@ func main() {
 	day7.Day7()
 	day8.Day8()
 	day9.Day9()
+	day10.Day10()
 }
