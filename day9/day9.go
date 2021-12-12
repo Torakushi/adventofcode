@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 	"sort"
-	"strconv"
-	"strings"
+
+	"adventofcode/utils"
 )
 
 func Day9() {
@@ -40,7 +40,7 @@ func process() error {
 
 	// Initialize the middle line
 	scanner.Scan()
-	middle, err = stringToIntArray(scanner.Text())
+	middle, err = utils.StringToInt8Array(scanner.Text())
 	if err != nil {
 		return err
 	}
@@ -51,7 +51,7 @@ func process() error {
 	var coords []coord
 	sum, rowIndex := 0, 0
 	for scanner.Scan() {
-		after, err = stringToIntArray(scanner.Text())
+		after, err = utils.StringToInt8Array(scanner.Text())
 		if err != nil {
 			return err
 		}
@@ -150,18 +150,4 @@ func processWindow(rowIndex int, previous, middle, after []int8) ([]coord, int) 
 	}
 
 	return indexes, sum
-}
-
-func stringToIntArray(s string) ([]int8, error) {
-	result := make([]int8, len(s))
-
-	arrStr := strings.Split(s, "")
-	for i, v := range arrStr {
-		n, err := strconv.Atoi(v)
-		if err != nil {
-			return nil, err
-		}
-		result[i] = int8(n)
-	}
-	return result, nil
 }
