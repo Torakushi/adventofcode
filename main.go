@@ -16,6 +16,7 @@ import (
 	"adventofcode/day20"
 	"adventofcode/day21"
 	"adventofcode/day22"
+	"adventofcode/day25"
 	"adventofcode/day3"
 	"adventofcode/day4"
 	"adventofcode/day5"
@@ -48,4 +49,5 @@ func main() {
 	day20.Day20()
 	day21.Day21()
 	day22.Day22()
+	day25.Day25()
 }
